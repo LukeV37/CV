@@ -10,7 +10,7 @@ make
 ```
 Try viewing the the document in the browser `python3 -m http.server`.
 
-### Install Dependancies
+### Install Dependencies
 ```
 sudo apt install texlive-full
 ```
