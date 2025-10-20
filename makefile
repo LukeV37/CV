@@ -1,6 +1,6 @@
-main: main.tex
+main: template.tex
 	@mkdir -p ./tmp
-	@latexmk -output-directory=./tmp main.tex
+	@latexmk -output-directory=./tmp template.tex
 
 clean:
 	@rm -rf ./tmp/*
