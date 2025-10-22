@@ -82,7 +82,8 @@
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+%\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[style=numeric,sorting=ynt, maxbibnames=2]{biblatex}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -96,7 +97,6 @@
 
 %debug page outer frames
 %\usepackage{showframe}
-
 
 % job listing environments
 \newenvironment{jobshort}[2]
@@ -184,29 +184,34 @@ May 2021 & B.S. Mechanical Engineering at Oklahoma State University \hfill (GPA:
 %----------------------------------------------------------------------------------------
 \section{Research Experience}
 
-\begin{joblong}{ATLAS Analysis: Hadronic Higgs in VBF production mode}{Fall 2025 - October 2025}
-\item Optimized Adversarial Neural Network for signal vs background classification to produce a score decorrelated from mass allowing for 10\% improvement in signal extraction.
-\item Created a highly configurable , automated training framework to benchmark various models.
-\item Performed fit studies to optimize signal:background ratio and maximize significance.
-\item Manipulated low-level workspaces to be used for fit combinations with other channels.
-\end{joblong}
+\begin{jobshort}{ATLAS Analysis: Hadronic Higgs in the VH production mode}{Spring 2023 - Fall 2023}
+My contributions to this analysis included investigating a low pT region with high statistics in the 1-Lepton channel to better constrain backgrounds.
+Due to the high statistics, this region caused various pulls on nuisance parameters which required me to investigate various decorrelation schemes.
+My primary result by including this region was increasing the Z boson sensitivity by nearly 20\% which allowed for $5.2\sigma$ on the $VZ, Z\rightarrow c\bar{c}$ process \cite{VH}.
+\end{jobshort}
 
-\begin{joblong}{OSU Analysis: Pileup Mitigation using Graph \& Attention NN}{Fall 2023 - Current}
-\item Developed simulation framework for HPC environment, that scales to $\langle \mu \rangle=200$, using MadGraph+Pythia+ROOT with various hard scatter signals and pileup backgrounds.
-\item Designed graph and attention based neural networks in PyTorch to encode events and maximally extract event-wide correlations allowing for energy and mass corrections at the jet level.
-\item Demonstrated significant improvement to diHiggs mass reconstruction in the HL-LHC environment.
-\end{joblong}
+\begin{jobshort}{ATLAS Analysis: Hadronic Higgs in VBF production mode}{Fall 2023 - Current}
+VBF Higgs production is a stat-limited channel and subtracting the large non-resonant QCD background poses a significant challenge.
+Therefore, my primary contribution to this analysis was designing and optimizing a framework to train adversarial NNs to construct signal regions with minimal background sculpting.
+I also manipulated low-level workspaces to perform fit combinations to provide ATLAS with the strongest results to date regarding $VBF,H \rightarrow b\bar{b}$ significance and $VH+VBF,H \rightarrow c\bar{c}$ limits.
+\end{jobshort}
 
-\begin{joblong}{OSU Analysis: Hadronic Top Quark Polarimetry using ML}{Fall 2024 - Current}
-\item Reconstructed semi-leptonic ttbar events using MadGraph+Pythia. Developed custom C++ event loop using FastJet to cluster hadronic activity. Allows for large attention models to train on 10M+ events.
-\item Designed and optmized attention NN to perform regression task on jet substructure to infer spin correlations of top decay products which allows for hadronic channel analysis.
-\end{joblong}
+\begin{jobshort}{ATLAS Analysis: GN2X $t\bar{t}$ Calibration}{Spring 2023 - Spring 2024}
+GN2X is a novel boosted jet tagger to distinguish between Hbb, Hcc, top, and QCD.
+I contributed to the evaluation and calibration of GN2Xv01 on semi-leptonic ttbar events.
+Using ATLAS software, I performed a likelihood fit to derive scale factors to quantify the phase space sculpting between MC and data for tagged events.
+\end{jobshort}
 
-\begin{joblong}{ATLAS Analysis: Hadronic Higgs in the VH production mode}{Spring 2023 - Fall 2023}
-\item Investigated high statistics, low pT region in 1-Lepton channel to better constrain backgrounds.
-\item Inspected pulls on various nuisance parameters to relieve tension on the liklihood fit model.
-\item Improved the Z boson sensitivity by 20\% which allowed for $5.2\sigma$ on the $VZ, Z\rightarrow c\bar{c}$ process.
-\end{joblong}
+\begin{jobshort}{R\&D Project: Pileup Mitigation using Graph \& Attention NN}{Fall 2023 - Current}
+Pileup mitigation will be a crucial problem for the High-Lumi LHC, and implementing state of the art algorithms is necessary to maximize the LHC discovery potential.
+I developed graph and attention based neural networks in PyTorch to encode events and extract event-wide correlations.
+This approach provides continuous energy and mass corrections at the jet level and demonstrates significant improvement to diHiggs reconstruction in HL-LHC environment.
+For this project, I developed a simulation framework using MadGraph + Pythia for HPC environment, that scales efficiently to $\langle \mu \rangle=200$.
+\end{jobshort}
+
+\begin{jobshort}{R\&D Project: Hadronic Top Quark Polarimetry using ML}{Fall 2024 - Current}
+Top quark entanglement can be studied at high energy through the spin correlations of decay products. Traditionally, only the leptonic channel is studied, however I have developed an attention NN to perform a regression task to predict hadronic subjet structure to allow for a hadronic channel analysis.
+\end{jobshort}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
@@ -223,7 +228,7 @@ May 2021 & B.S. Mechanical Engineering at Oklahoma State University \hfill (GPA:
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 Programming Languages &  \normalsize{Python, C/C++, Bash, GNU Linux}\\
-Monte-Carlo Simulation &  \normalsize{MadGraph, Pythia, Delphes, FastJet}\\
+Monte-Carlo Simulation &  \normalsize{MadGraph, Pythia, Delphes, FastJet, ATLAS Software}\\
 Data Analysis &  \normalsize{ROOT, Numpy, Awkward, Matplotlib, PyTorch, TensorFlow, Scikit-Learn}\\
 Computing &  \normalsize{Parallel Computing, Accelerated Computing, NFS Shares, Homelab SysAdmin}\\
 \end{tabularx}
@@ -266,6 +271,34 @@ Gained knowledge of ATLAS analysis tools such as AnalysisBase and how to apply t
 
 \begin{jobshort}{US ATLAS Machine Learning Training}{\href{https://indico.cern.ch/event/1264566/}{Lawrence Berkeley National Lab July 2023}}
 Discussed application of various models in physics: MLP, Convolutional, Graph, Attention, Adversarial, Generative, Normalizing Flows, Invertible.
+\end{jobshort}
+
+%----------------------------------------------------------------------------------------
+%	LEADERSHIP AND SERVICE
+%----------------------------------------------------------------------------------------
+\section{Leadership and Service}
+\begin{jobshort}{President of Physics Graduate Student Association}{Summer 2024-Spring 2025}
+Hosted events and meetings for the benefit of the graduate student population. Organized a poster symposium for graduate students to share and advertise research to new students. Represented the Physics Graduate Student body at the college-wide Student Government Association.
+\end{jobshort}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING AND OUTREACH
+%----------------------------------------------------------------------------------------
+\section{Teaching and Outreach}
+\begin{jobshort}{Mentor for REU Summer Students}{Summer 2025}
+Aided upper-level undergraduate students with getting started with HEP-Ex research. Introduce them to software tools in HEP which include: simulation, preprocessing, plotting, and physical interpretation.
+\end{jobshort}
+
+\begin{jobshort}{Teaching Assistant PHYS 1114 Labs and Recitations}{Spring 2019-Fall 2023}
+Guide students through introductory mechanics labs: gravity, springs, pendulums, etc.
+\end{jobshort}
+
+\begin{jobshort}{Tour Guide OSU Physics Department}{2023-Current}
+Lead tours for incoming prospective students to show them various physics labs and motivate them to study physics.
+\end{jobshort}
+
+\begin{jobshort}{High School Talks}{2025}
+Invited to speak to students at Bishop Kelley High School to encourage science, robotics, and STEM involvement.
 \end{jobshort}
 
 \vfill
